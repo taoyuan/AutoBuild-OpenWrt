@@ -5,7 +5,7 @@
 # Youtube Channel: https://goo.gl/fvkdwm 
 #=================================================
 
-name: Build_RPI4
+name: Build_RPI4B
 
 on: 
   release:
@@ -76,9 +76,9 @@ jobs:
     #    git clone https://github.com/Lienol/openwrt-package package/lienol
     #    git clone "your_github_link" package/"your_folder_name"      
 
-    - name: Configuration Customization - Build_RPI4
+    - name: Configuration Customization - Build_RPI4B
       env:
-        CONFIG_FILE: 'rpi4.config'
+        CONFIG_FILE: 'rpi4b.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x ./customize.sh && ./customize.sh
